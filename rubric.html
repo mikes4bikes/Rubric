@@ -62,10 +62,10 @@
 <body>
 	<h2 id="title">Writing Rubric for Introduction to College Writing </h2>
 	<form id="survey-form">
-		 <label id="name-label" for="name">Name&nbsp;&nbsp;</label>
-  			<input type="text" id="name" placeholder="Enter your name" required>&nbsp;&nbsp;Today's date:<input type="date" id="today"  >
+		 <label id="name-label"  for="name">Name&nbsp;&nbsp;</label>
+  			<input type="text" class="pdfArray" id="name" placeholder="Enter your name" >&nbsp;&nbsp;Today's date:<input class="pdfArray" type="date" id="today"  >
 		 Select Class
-		  <select name="class-selector" id="classSelector">
+		  <select name="class-selector" class="pdfArray" id="classSelector">
 			  <option value="MW 1:00 pm">MW 1:00 pm</option>
 			  <option value="Monday 9 am">Monday 9 am</option>
 			  <option value="Wednesday 9 am">Wednesday 9 am</option>
@@ -74,43 +74,42 @@
 			  <option value="MW 2:30 pm">MW 2:30 pm</option>
 	      </select>
 		<h4>Rubric Prerequisites</h4>
-		<h4>Instructions<br>
-		  <input type="radio" name="instructions" value="1" > 
-		  Complete
-  		  <input type="radio" checked name="instructions" value="0"> 
-  		  Incomplete<br>
-		  <textarea name="instructions-comments" rows="1" cols="55" ></textarea>
+		<h4 >Instructions
+		  <select name="complete-instructions" class="pdfArray" id="instruction">
+			  <option value="incomplete">incomplete</option>
+			  <option value="complete">complete</option>
+	      </select><br>
+		  <textarea id="instructions-comments" class="pdfArray" rows="1" cols="55" ></textarea>
 		  <br>
-		  Formatting<br>
-		  <input type="radio" name="formatting" value="1" > 
-		  Complete
-  		  <input type="radio" name="formatting" checked value="0"> 
-  		  Incomplete<br>
-		  <textarea name="formatting-comments" rows="1" cols="55" ></textarea>
+		  Formatting
+		  <select name="complete-formatting" class="pdfArray" id="formatting">
+			  <option value="incomplete">incomplete</option>
+			  <option value="complete">complete</option>
+	      </select><br>
+		  <textarea id="formatting-comments" class="pdfArray" rows="1" cols="55" ></textarea>
 		  <br>
-		  Spelling<br>
-		  <input type="radio" name="spelling" value="1" > 
-		  Complete
-  		  <input type="radio" name="spelling" checked  value="0"> 
-  		  Incomplete<br>
-		  <textarea name="spelling-comments" rows="1" cols="55" ></textarea>
+		  Spelling
+		  <select name="complete-spelling" class="pdfArray" id="spelling">
+			  <option value="incomplete">incomplete</option>
+			  <option value="complete">complete</option>
+	      </select><br>
+		  <textarea id="spelling-comments" class="pdfArray" rows="1" cols="55" ></textarea>
 		  <br>
-	  Capitalization<br>
-		  <input type="radio" name="capitalization" value="1" > 
-		  Complete
-  		  <input type="radio" name="capitalization" checked  value="0"> 
-  		  Incomplete<br>
-		  <textarea name="capitalization-comments" rows="1" cols="55" ></textarea>
+	  Capitalization
+		  <select name="complete-capitalization" class="pdfArray" id="capitalization">
+			  <option value="incomplete">incomplete</option>
+			  <option value="complete">complete</option>
+	      </select><br>
+		  <textarea id="capitalization-comments" class="pdfArray" rows="1" cols="55" ></textarea>
 		  <br>
 		  Plagiarism
-		  <br>
-		  <input type="radio" name="plagiarism" value="1" > 
-		  Complete
-  		  <input type="radio" name="plagiarism" checked  value="0"> 
-  		  Incomplete<br>
-		  <textarea name="plagiarism-comments" rows="1" cols="55" ></textarea><br>
+		  <select name="complete-plagiarism" class="pdfArray" id="plagiarism">
+			  <option value="incomplete">incomplete</option>
+			  <option value="complete">complete</option>
+	      </select><br>
+		  <textarea id="plagiarism-comments" class="pdfArray" rows="1" cols="55" ></textarea><br>
 		  Grade for Evidence and Support<br>
-		  <select onChange="calcScore()" name="evidence-grade" id="evGrade">
+		  <select onChange="calcScore()" class="pdfArray" name="evidence-grade" id="evGrade">
 			  <option value="5">5</option>
 			  <option value="4">4</option>
 			  <option value="3">3</option>
@@ -119,10 +118,10 @@
 			  <option selected  value="0">0</option>
 	  </select>
 		  <br>
-			<textarea name="evidence-support-comments" rows="1" cols="55" ></textarea>
+			<textarea id="evidence-support-comments" class="pdfArray" rows="1" cols="55" ></textarea>
 		  	<br>
 	  	  Grade for Logic and Coherence<br>
-		  <select onChange="calcScore()" name="logic-grade" id="logGrade">
+		  <select onChange="calcScore()" class="pdfArray" name="logic-grade" id="logGrade">
 			  <option value="5">5</option>
 			  <option value="4">4</option>
 			  <option value="3">3</option>
@@ -131,10 +130,10 @@
 			  <option selected  value="0">0</option>
 	  </select>
           <br>
-          <textarea name="logic-coherence-comments" rows="1" cols="55" ></textarea>
+          <textarea id="logic-coherence-comments" class="pdfArray" rows="1" cols="55" ></textarea>
 			<br>
 		  Grade for Organization and Focus<br>
-		  <select onChange="calcScore()" name="organization-grade" id="orgGrade">
+		  <select onChange="calcScore()" class="pdfArray" name="organization-grade" id="orgGrade">
 			  <option value="5">5</option>
 			  <option value="4">4</option>
 			  <option value="3">3</option>
@@ -143,10 +142,10 @@
 			  <option selected value="0">0</option>
 	  </select>
 		  <br>
-			<textarea name="organization-focus-comments" rows="1" cols="55" ></textarea>
+			<textarea id="organization-focus-comments" class="pdfArray" rows="1" cols="55" ></textarea>
 			<br>
 		  Grade for Grammar, Punctuation, and Usage<br>
-		  <select onChange="calcScore()" name="grammar-grade" id="gramGrade">
+		  <select onChange="calcScore()" class="pdfArray" name="grammar-grade" id="gramGrade">
 			  <option value="5">5</option>
 			  <option value="4">4</option>
 			  <option value="3">3</option>
@@ -155,9 +154,9 @@
 			  <option value="0" selected>0</option>
 	      </select>
 		  <br>
-			<textarea name="grammar-punctuation-usage-comments" rows="1" cols="55" ></textarea>
+			<textarea id="grammar-punctuation-usage-comments" class="pdfArray" rows="1" cols="55" ></textarea>
 			<br>
-		  Final grade =	<label name="final-score" id="finalScore">0</label>
+		  Final grade =	<label name="final-score" class="pageArray" id="finalScore">0</label>
 		<button id="button">Print</button>
 	</form>
 	<script type="text/javascript">
@@ -198,12 +197,65 @@
 	</script>
 	<script>
 		// init the jsPDF library
+		const pdf = new jsPDF();
+		pdf.setFontSize(10);
+		pdf.setFont("Georgia", "bold");
 		
 		// add 'click' event listener for the button
 		button.addEventListener('click', printPDF)
 		// actual PDF options
 		function printPDF() {
-      window.print(); 
+			let pageArray = [];
+			pageArray.push(document.getElementById('name').value);
+			pageArray.push(document.getElementById('today').value);
+			pageArray.push(document.getElementById('classSelector').value);
+			pageArray.push("");
+			pageArray.push('Instructions');
+			pageArray.push(document.getElementById('instruction').value);
+			pageArray.push(document.getElementById('instructions-comments').value);
+			pageArray.push("");
+			pageArray.push('Formatting');
+			pageArray.push(document.getElementById('formatting').value);
+			pageArray.push(document.getElementById('formatting-comments').value);
+			pageArray.push("");
+			pageArray.push('Spelling');
+			pageArray.push(document.getElementById('spelling').value);
+			pageArray.push(document.getElementById('spelling-comments').value);
+			pageArray.push("");
+			pageArray.push('Capitalization');
+			pageArray.push(document.getElementById('capitalization').value);
+			pageArray.push(document.getElementById('capitalization-comments').value);
+			pageArray.push("");
+			pageArray.push('Plagiarism');
+			pageArray.push(document.getElementById('plagiarism').value);
+			pageArray.push(document.getElementById('plagiarism-comments').value);
+			pageArray.push("");
+			pageArray.push('Evidence and Support');
+			pageArray.push(document.getElementById('evGrade').value);
+			pageArray.push(document.getElementById('evidence-support-comments').value);
+			pageArray.push("");
+			pageArray.push('Logic and Coherence');
+			pageArray.push(document.getElementById('logGrade').value);
+			pageArray.push(document.getElementById('logic-coherence-comments').value);
+			pageArray.push("");
+			pageArray.push('Organization and Focus');
+			pageArray.push(document.getElementById('orgGrade').value);
+			pageArray.push(document.getElementById('organization-focus-comments').value);
+			pageArray.push("");
+			pageArray.push('Grammar, Punctuation, and Usage');
+			pageArray.push(document.getElementById('gramGrade').value);
+			pageArray.push(document.getElementById('grammar-punctuation-usage-comments').value);
+			pageArray.push("");
+			pageArray.push("Final Score = " + document.getElementById('finalScore').innerHTML);
+
+	
+			
+			
+			//		// @param 2 - Coordinate (in units declared at inception of PDF document) against upper edge of the page
+			// @param 3 - String or array of strings to be added to the page. Each line is shifted one line down per font, spacing settings declared before this call.
+			pdf.text(20, 20, pageArray);
+			// save the PDF document (downloadable)
+			pdf.save(pageArray[0] + '_Rubric');
 		}
 	</script>
 </body>
